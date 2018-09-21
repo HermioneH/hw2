@@ -1,0 +1,41 @@
+function setup() {
+	createCanvas(400, 400);
+	frameRate(10)
+}
+
+function draw() {
+	background(240);
+
+	let r = random(150, 255)
+	let blue = color(0, r, r)
+	let red = color(r, 0, 0)
+	let yellow = color(r,r,0)
+	let lowrightheight = 330
+	let lowrightwidth = r
+	let middleheight=50
+	let lowleft =r
+
+	noStroke();
+
+	fill(blue);
+	rect(0, r, lowleft, height - r);
+
+	fill(red);
+	rect(lowleft, 0, width, r);
+
+	fill(yellow);
+	rect(lowrightwidth, lowrightheight, width-lowrightwidth, height - lowrightheight);
+
+	stroke(0);
+	strokeWeight(10);
+	strokeCap(SQUARE);
+	line(lowleft, 0, lowleft, height);
+	line(0, r, width, r);
+	line(lowrightwidth, r, lowrightwidth, height);
+
+	strokeWeight(20);
+	line(0, middleheight, lowleft, middleheight);
+
+	strokeWeight(15);
+	line(lowrightwidth, lowrightheight, width, lowrightheight);
+}
