@@ -1,0 +1,53 @@
+function setup() {
+  createCanvas(400, 400);
+}
+
+
+var a = 10;
+var b=5;
+var changeInA = 3;
+var changeInB=6;
+var x = 2;
+var changeInX = 3;
+var y=5;
+var changeInY=2
+
+function draw() {
+  background(220);
+  
+  ellipse(a, a+b, b);
+	 ellipse(x, 200, y);
+	
+  
+  a = a + changeInA;
+	b=b+changeInB
+	 x = x+changeInX;
+	y=y+changeInY
+  
+	 if (x > width) {
+    changeInX = -3;
+  }
+  
+  if (x < 0) {
+    changeInX = 3;
+  }
+	if (y>width) {
+		changeInY=-2;
+	}
+	if (y<0) {
+		changeinY=2
+	}
+  if (a > width) {
+    changeInA = -3;
+	}
+		if (b>width) {
+			changeInB=-5
+  }
+  
+  if (a < 0) {
+    changeInA = 3;
+  }
+	if (b<0) {
+		changeInB=5
+	}
+}
