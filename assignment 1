@@ -16,8 +16,10 @@ function draw() {
   background(220);
   
   ellipse(a, a+b, b);
+	fill (x,200,10)
 	 ellipse(x, 200, y);
 	
+	fill (225,10,y)
   
   a = a + changeInA;
 	b=b+changeInB
